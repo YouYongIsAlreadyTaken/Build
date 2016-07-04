@@ -1,6 +1,7 @@
 var userDevice = require('../../../infrastructure/userDevice/userDevice.js'),
     restful = require('../../../node-restful'),
     readme = require('./hot/readme.json'),
+    express = require('express'),
     model = require('./mongoose/model.js'),
     appSettings = require('../../../infrastructure/appSettings/service.js')('build');
 
@@ -56,7 +57,9 @@ var build = restful.model(
     })
     .route('readme', 'get', function (req, res) {
         res.send(readme);
-    });
+    })
+    .route('frontend', 'get', fexpress.static(path.join(__dirname, '../frontend/dist')))
+    ;
     
     
 module.exports = { models: [build,appSettings], hot: ['hot/readme.json'] };
