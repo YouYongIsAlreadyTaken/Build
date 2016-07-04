@@ -2,6 +2,7 @@ var userDevice = require('../../../infrastructure/userDevice/userDevice.js'),
     restful = require('../../../node-restful'),
     readme = require('./hot/readme.json'),
     express = require('express'),
+    path = require('path'),
     model = require('./mongoose/model.js'),
     appSettings = require('../../../infrastructure/appSettings/service.js')('build');
 
