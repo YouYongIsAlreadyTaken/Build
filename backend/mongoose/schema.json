@@ -1,0 +1,12 @@
+{
+    "build_number":"string",
+    "build_name":"string",
+    "category":"string",
+    "group_number": "number",
+    "group_index": "number",
+    "status":"string",
+    "request_for":"string", 
+    "start_time": "Date",
+    "finish_time": "Date",
+    "duration":"string"
+}

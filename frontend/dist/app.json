@@ -1,0 +1,41 @@
+{
+    "states": {
+        "main": {
+            "templateUrl": "tab.html",
+            "controller": "main-bundle.js",
+            "dependencies": [
+                "$http",
+                "AppServiceAddress",
+                "AppService",
+                "AppState",
+                "AppData",
+                "AppSettings",
+                "ServerEventSource",
+                "$timeout",
+                "$cordovaLocalNotification"
+            ]
+        },
+        "settings": {
+            "templateUrl": "settings.html",
+            "controller": "settings-bundle.js",
+            "dependencies": [
+                "AppService",
+                "AppState",
+                "AppData",
+                "AppSettings",
+                "$rootScope",
+                "$timeout"
+            ]
+        },
+        "detail": {
+            "templateUrl": "detail.html",
+            "controller": "detail-bundle.js",
+            "dependencies": [
+                "AppService",
+                "AppData",
+                "AppStateData",
+                "$timeout"
+            ]
+        }
+    }
+}

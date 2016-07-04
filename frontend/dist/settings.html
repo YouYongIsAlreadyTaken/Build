@@ -1,0 +1,18 @@
+<ion-view title="Settings">
+    <ion-content class="has-header">
+        <h4 class="text-center">Subscribed Categories</h4>
+        <div class="list">
+            <div class="item item-input">
+              <span class="input-label"></span>
+              <input type="search" placeholder="Filter Categories..." ng-model="vm.search">
+              <button ng-show="vm.search" class="button button-icon ion-android-close input-button" ng-click="vm.search=''"></button>    
+            </div>
+            
+        </div>
+        
+        <ion-toggle ng-show="!vm.search || item.category.indexOf(vm.search)>=0" ng-repeat="item in vm.sublist" ng-model="item.checked"
+            ng-checked="item.checked" ng-change="vm.updateSettings()">
+            {{ item.category }}
+        </ion-toggle>
+    </ion-content>
+</ion-view>

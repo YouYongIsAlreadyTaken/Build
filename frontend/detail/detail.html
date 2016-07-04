@@ -1,0 +1,20 @@
+<ion-view title="{{vm.category}}">
+    <ion-content class="has-header">
+        <div class="card" ng-repeat="group in vm.data.groups">
+            <div class="item item-divider">
+                <div class="boxleft">Group {{group.group_number}}</div>
+            </div>
+            <div class="item item-divider" ng-style="build.status == 'completed' ? {'background-color':'#33ff1b' } : { 'background-color':'#ff3b30' }"
+                ng-repeat="build in group.items">
+                <div>
+                    <div class="contentleft">{{build.build_name}}</div>
+                    <div class="contentright">{{build.build_number}}</div>
+                </div>
+                <div>
+                    <div class="contentleft">{{build.start_time}}</div>
+                    <div class="contentright">{{build.duration}}s</div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

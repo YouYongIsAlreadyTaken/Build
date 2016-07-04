@@ -1,0 +1,21 @@
+<ion-view title="BUILD">
+    <ion-nav-buttons side="right">
+      <button class="button button-clam" ng-click="vm.updateSettings()">
+        <i class="icon ion-navicon-round"></i>
+      </button>
+    </ion-nav-buttons> 
+    <ion-content class="has-header">
+        <div class="card" ng-show="vm.isSubscribed(category)" ng-repeat="category in vm.categories" ng-click="vm.viewCategoryDetail(category.categoryName)">
+            <div class="item item-divider">
+                <div class="text-center">{{category.categoryName}}</div>
+            </div>
+            <div class="item item-divider">
+                <div class="contentleft"></div>
+                <div class="contentright">
+                    <i class="icon" ng-repeat="item in category.items" ng-class="item.status =='completed'?'balanced ion-checkmark-circled':'assertive ion-close-circled'"></i>
+                </div>
+            </div>
+
+        </div>
+    </ion-content>
+</ion-view>
