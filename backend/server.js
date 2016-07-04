@@ -59,7 +59,7 @@ var build = restful.model(
     .route('readme', 'get', function (req, res) {
         res.send(readme);
     })
-    .route('frontend', 'use', express.static(path.join(__dirname, '../frontend/dist')))
+    .route('frontend', 'get', express.static(path.join(__dirname, '../frontend/dist')))
     ;
     
     
